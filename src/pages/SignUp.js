@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // <-- Import useNavigate
 import useUser from "context/UserContext";
 import Button from "components/Button";
 import Input from "components/Input";
@@ -8,12 +9,14 @@ const SignUp = () => {
   const [name, setName] = useState("");
   const [seed, setSeed] = useState(Math.random());
   const { createUser, status } = useUser();
+  const navigate = useNavigate(); // <-- Initialize navigate
 
-  const onFormSubmit = (e) => {
+  const onFormSubmit = async (e) => {
     e.preventDefault();
     const trimedName = name.trim();
     if (trimedName) {
-      createUser(trimedName, generateAvatar(seed));
+      await createUser(trimedName, generateAvatar(seed));
+      navigate("/chat"); // <-- Navigate to /chat after user creation
     }
   };
 
@@ -21,7 +24,7 @@ const SignUp = () => {
     `https://api.dicebear.com/7.x/pixel-art/svg?seed=${seed}`;
 
   return (
-    <div className=" flex items-center justify-center h-full">
+    <div className="flex items-center justify-center h-full">
       <form onSubmit={onFormSubmit} className="w-72">
         <div className="w-3/4 mx-auto mb-6">
           <img
