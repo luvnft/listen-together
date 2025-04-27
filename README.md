@@ -1,11 +1,11 @@
 <p align="center" style="margin-top: 120px">
   <a href="https://listen-together.app">
-   <img src="./public/listen-together-logo.png" width="100px" alt="Listen Together Logo">
+   <img src="./public/listen-together-logo.png" width="100px" alt="JERSEY.FM Logo">
   </a>
 </p>
 
   <p align="center">
-  A real-time chat app that allows you to listen to music synchronously with your friends.
+  A real-time chat app that allows you to listen to Jersey Club music synchronously with your friends.
   <br>
     <a href="https://listen-together.app"><strong>Demo</strong></a>
   </p>

@@ -5,13 +5,8 @@ import useAuth from "context/AuthContext";
 import useError from "hooks/useError";
 import useMediaQuery from "hooks/useMediaQuery";
 import Button from "components/Button";
-import {
-  BiLogoGithub,
-  BiLogoGoogle,
-  BiLogoLinkedinSquare,
-  BiSolidEnvelope,
-  BiSolidUser,
-} from "react-icons/bi";
+import { BiLogoGoogle, BiSolidUser } from "react-icons/bi";
+import { FaTiktok, FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6"; // Import social media icons
 
 const Landing = () => {
   const isMobile = useMediaQuery();
@@ -23,21 +18,20 @@ const Landing = () => {
       style={{
         backgroundImage: `url('${isMobile ? heroImageMobile : heroImage}')`,
       }}
-      className="bg-cover bg-blend-overlay bg-center h-full bg-primary 
-      flex flex-col justify-center items-center text-center"
+      className="flex flex-col items-center justify-center h-full text-center bg-center bg-cover bg-blend-overlay bg-primary"
     >
       {errorComponent}
       <div>
-        <h1 className="text-5xl md:text-6xl m-3">LET'S LISTEN TOGETHER</h1>
-        <p className="text-base md:text-lg mx-3">
-          Listen to your favorite music synchronously and discuss it with your
+        <h1 className="m-3 text-5xl md:text-6xl">PLAY JERSEY.FM</h1>
+        <p className="mx-3 text-base md:text-lg">
+          Listen to your favorite Jersey Club music synchronously and discuss it with your
           friends.
         </p>
-        <div className="flex sm:items-center justify-center flex-col sm:flex-row gap-2 text-primary md:text-lg m-10">
+        <div className="flex flex-col justify-center gap-2 m-10 sm:items-center sm:flex-row text-primary md:text-lg">
           <Button
             type="secondary"
             onClick={logIn}
-            className="font-semibold py-3 flex gap-3 items-center justify-center"
+            className="flex items-center justify-center gap-3 py-3 font-semibold"
             disabled={isLoading === "google"}
           >
             <BiLogoGoogle className="text-2xl" />
@@ -45,7 +39,7 @@ const Landing = () => {
           </Button>
           <Button
             type="secondary"
-            className="font-semibold py-3 flex gap-3 items-center justify-center"
+            className="flex items-center justify-center gap-3 py-3 font-semibold"
             onClick={logInAnonymous}
             disabled={isLoading === "anon"}
           >
@@ -54,32 +48,43 @@ const Landing = () => {
           </Button>
         </div>
       </div>
-      <footer className="absolute w-full bottom-0 left-0 flex justify-center">
+      <footer className="absolute bottom-0 left-0 flex justify-center w-full">
         <a
           target="_blank"
-          href="https://github.com/aryan-mehrabi/listen-together"
+          href="https://www.tiktok.com/@jerseyfm" // Replace with your TikTok link
           rel="noreferrer"
-          className="text-2xl mx-4 my-4 p-1"
+          className="p-1 mx-4 my-4 text-2xl"
         >
-          <BiLogoGithub />
+          <FaTiktok />
         </a>
         <a
           target="_blank"
-          href="https://www.linkedin.com/in/aryan-mehrabi/"
+          href="https://www.instagram.com/jerseyclubfm" // Replace with your Instagram link
           rel="noreferrer"
-          className="text-2xl mx-4 my-4 p-1"
+          className="p-1 mx-4 my-4 text-2xl"
         >
-          <BiLogoLinkedinSquare />
+          <FaInstagram />
         </a>
         <a
-          href="mailto:aryan.me77@yahoo.com"
-          className="text-2xl mx-4 my-4 p-1"
+          target="_blank"
+          href="https://www.facebook.com" // Replace with your Facebook link
+          rel="noreferrer"
+          className="p-1 mx-4 my-4 text-2xl"
         >
-          <BiSolidEnvelope />
+          <FaFacebookF />
+        </a>
+        <a
+          target="_blank"
+          href="https://twitter.com/jerseyclubfm" // Replace with your X (Twitter) link
+          rel="noreferrer"
+          className="p-1 mx-4 my-4 text-2xl"
+        >
+          <FaXTwitter />
         </a>
       </footer>
     </div>
   );
 };
 
+export default Landing;
 export default Landing;
