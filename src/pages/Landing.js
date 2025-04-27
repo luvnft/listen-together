@@ -51,7 +51,7 @@ const Landing = () => {
       <footer className="absolute bottom-0 left-0 flex justify-center w-full">
         <a
           target="_blank"
-          href="https://www.tiktok.com/@jerseyfm" // Replace with your TikTok link
+          href="https://www.tiktok.com/@jerseyfm"
           rel="noreferrer"
           className="p-1 mx-4 my-4 text-2xl"
         >
@@ -59,7 +59,7 @@ const Landing = () => {
         </a>
         <a
           target="_blank"
-          href="https://www.instagram.com/jerseyclubfm" // Replace with your Instagram link
+          href="https://www.instagram.com/jerseyclubfm"
           rel="noreferrer"
           className="p-1 mx-4 my-4 text-2xl"
         >
@@ -67,7 +67,7 @@ const Landing = () => {
         </a>
         <a
           target="_blank"
-          href="https://www.facebook.com" // Replace with your Facebook link
+          href="https://www.facebook.com"
           rel="noreferrer"
           className="p-1 mx-4 my-4 text-2xl"
         >
@@ -75,7 +75,7 @@ const Landing = () => {
         </a>
         <a
           target="_blank"
-          href="https://twitter.com/jerseyclubfm" // Replace with your X (Twitter) link
+          href="https://twitter.com/jerseyclubfm"
           rel="noreferrer"
           className="p-1 mx-4 my-4 text-2xl"
         >
@@ -86,5 +86,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
 export default Landing;
