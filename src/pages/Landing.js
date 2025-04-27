@@ -22,7 +22,7 @@ const Landing = () => {
     >
       {errorComponent}
       <div>
-        <h1 className="m-3 text-5xl md:text-6xl">PLAY JERSEY.FM</h1>
+        <h1 className="m-3 text-5xl md:text-6xl">JERSEY.FM</h1>
         <p className="mx-3 text-base md:text-lg">
           Listen to your favorite Jersey Club music synchronously and discuss it with your
           friends.
